@@ -398,6 +398,11 @@ VERSION='7.2.5'
 RELEASE='1'
 PRODUCT_FULL=${PRODUCT}-${VERSION}-${RELEASE}
 
+if [[ "${#}" == 0 ]]
+then
+    usage
+fi 
+
 check_workdir
 get_system
 install_deps
